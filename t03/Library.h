@@ -10,7 +10,7 @@ class Library
     public:
     //variables
         Array arr;
-        int numOfBook;
+       
     //functions
        
         Library();
