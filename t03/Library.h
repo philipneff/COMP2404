@@ -9,7 +9,7 @@ class Library
    
     public:
     //variables
-        Book arr[MAX_ARR_SIZE];
+        Array arr;
         int numOfBook;
     //functions
        
