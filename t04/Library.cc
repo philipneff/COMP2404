@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Array.h"
 
+Library::Library(){}
 Library::~Library(){}
 
 void Library::addBook(Book& newBook)

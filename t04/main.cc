@@ -16,7 +16,7 @@ int main()
   string title, author;
   int    id, year;
   int    menuSelection;
-  Book book;
+  Book* newbook;
 
   while (1) {
     menuSelection = mainMenu();
@@ -35,16 +35,15 @@ int main()
       cin  >> year;
 
 
-      book=Book(id, title, author, year);
-      //book.print();
-      library.addBook(book);
-      //book.print();
+      newbook=new Book(id, title, author, year);
+      library.addBook(*newbook);
+      delete newbook;
     }
   }
 
-  if (library.numOfBook > 0)
+  if (library.arr.size > 0)
     (library.print() );
-
+ 
   return 0;
 }
 
