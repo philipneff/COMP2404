@@ -10,7 +10,6 @@ class Book
     Book(int=0, string="Unknown", string="Unknown", int=0);
     void setBook(int, string, string, int);
     void print();
-    bool lessThan(Book*);
 
   private:
     int    id;

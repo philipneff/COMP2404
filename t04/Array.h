@@ -1,20 +1,27 @@
 #ifndef ARRAY_H
 #define ARRAY_H
-#define MAX_ARR_SIZE    128
-
+//header inclusions
 #include "Book.h"
 
-class Array 
-{
+//Global variables
+#define MAX_ARR_SIZE    128
+
+class Array{
     public:
+    //variables
+        Book elements[MAX_ARR_SIZE];
+        int size;
+    //functions
         Array();
-	~Array();
-       	void add(Book*);
+        ~Array();
+        void add(Book&);
         void print();
 
-    private:
-	Book** elements; // Will use dyn. alloc. array of pointers
-        int size;
 };
+
+
+
+
+
 
 #endif
