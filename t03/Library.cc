@@ -6,11 +6,9 @@ Library::~Library(){}
 
 void Library::addBook(Book& newBook)
 {
-    //newBook.print();
-    
+  
     arr.add(newBook);
     
-    //numOfBook+=1;
 }
 
 void Library::print()
