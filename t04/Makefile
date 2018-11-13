@@ -1,7 +1,7 @@
 OPT = -Wall
 
-t01:	main.o Book.o Library.o Array.o
-	g++ $(OPT) -o t03 main.o Book.o Library.o Array.o
+t04:	main.o Book.o Library.o Array.o
+	g++ $(OPT) -o t04 main.o Book.o Library.o Array.o
 
 main.o:	main.cc Book.h
 	g++ $(OPT) -c main.cc	
@@ -16,4 +16,4 @@ Book.o:	Book.cc Book.h
 	g++ $(OPT) -c Book.cc
 
 clean:
-	rm -f *.o t01 t02 t03
+	rm -f *.o t01 t02 t03 t04
