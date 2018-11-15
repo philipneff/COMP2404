@@ -5,15 +5,18 @@ using namespace std;
 #include "Book.h"
 #include "Library.h"
 
+
 int  mainMenu();
+void printLibrary(Library library);
+
 
 int main()
 {
-    Library	myLibrary; 
-    Book*	myBook;
-    string	title, author;
-    int		id, year;
-    int		menuSelection;
+  Library   library;
+  string title, author;
+  int    id, year;
+  int    menuSelection;
+  Book* newbook;
 
   while (1) {
     menuSelection = mainMenu();
@@ -30,15 +33,17 @@ int main()
       getline(cin, author);
       cout << "year:  ";
       cin  >> year;
-    
-    // Dynamically allocate each Book object
-    myBook = new Book(id, title, author, year);
-    myLibrary.addBook(myBook);
+
+
+      newbook=new Book(id, title, author, year);
+      library.addBook(*newbook);
+      delete newbook;
     }
   }
 
-    myLibrary.printLibrary();
-
+  if (library.arr.size > 0)
+    (library.print() );
+ 
   return 0;
 }
 
@@ -59,4 +64,13 @@ int mainMenu()
   return selection;
 }
 
+void printLibrary(Book arr[MAX_ARR_SIZE], int num)
+{
+  cout << endl << endl << "LIBRARY: " << endl;
+
+  for (int i=0; i<num; ++i)
+    arr[i].print();
+
+  cout << endl;
+}
 

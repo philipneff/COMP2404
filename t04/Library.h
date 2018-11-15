@@ -3,17 +3,28 @@
 
 #include "Book.h"
 #include "Array.h"
-
-using namespace std;
-
+//#define MAX_ARR_SIZE  128
 class Library
 {
+   
     public:
-        void addBook(Book*);
-        void printLibrary();
+    //variables
+        Array arr;
+       
+    //functions
+       
+        Library();
+        ~Library();
+        void addBook(Book&);
+        void print();      
 
     private:
-        Array newArray;
+       
+
+
 };
+
+
+
 
 #endif

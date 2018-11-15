@@ -1,20 +1,24 @@
-#include <iostream>
-#include <iomanip>
-
-#include "Book.h"
 #include "Library.h"
+#include <iostream>
 #include "Array.h"
 
-using namespace std;
+Library::Library(){}
+Library::~Library(){}
 
-void Library::addBook(Book* myBook)
+void Library::addBook(Book& newBook)
 {
-    newArray.add(myBook);
+  
+    arr.add(newBook);
+    
 }
 
-void Library::printLibrary()
+void Library::print()
 {
-    cout << endl << endl << "LIBRARY: " << endl;
-    newArray.print();
-    cout << endl;
+
+  std::cout << endl << endl << "LIBRARY: " << endl;
+  arr.print();
+  
+
+  std::cout << endl;
+
 }

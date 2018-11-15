@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-#include <string>
 using namespace std;
 
 #include "Book.h"
@@ -27,10 +26,5 @@ void Book::print()
        <<"  Title: "   << setw(40) << title
        <<";  Author: "  << setw(20) << author
        <<";  Year: "    << year << endl;
-}
-
-bool Book::lessThan(Book* b)
-{
-  return this->year < b->year; 
 }
 
