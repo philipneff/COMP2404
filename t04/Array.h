@@ -9,12 +9,12 @@
 class Array{
     public:
     //variables
-        Book elements[MAX_ARR_SIZE];
+        Book *elements[MAX_ARR_SIZE];
         int size;
     //functions
         Array();
         ~Array();
-        void add(Book&);
+        void add(Book*);
         void print();
 
 };

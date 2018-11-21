@@ -36,7 +36,7 @@ int main()
 
 
       newbook=new Book(id, title, author, year);
-      library.addBook(*newbook);
+      library.addBook(newbook);
       delete newbook;
     }
   }
