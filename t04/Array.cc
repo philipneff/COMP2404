@@ -1,5 +1,6 @@
 #include "Array.h"
 #include <iostream>
+#include "Book.h"
 
 Array::Array()
 {
@@ -12,8 +13,9 @@ Array::~Array(){
 
 void Array::add(Book* newBook)
 {
-    
-size+=1;
+    elements[size]=newBook;
+    size+=1;
+    std::cout<<"in add\t"<<newBook;
 }
 
 void Array::print()
@@ -21,6 +23,7 @@ void Array::print()
     for(int i=0; i<size;i++){
         std::cout<<"elements\t"<<elements<<'\n';
         std::cout<<"*elements\t"<<*elements<<'\n';
+        //elements->print()<<'\n';
         
         
         }
