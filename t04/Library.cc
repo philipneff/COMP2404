@@ -5,7 +5,7 @@
 Library::Library(){}
 Library::~Library(){}
 
-void Library::addBook(Book& newBook)
+void Library::addBook(Book* newBook)
 {
   
     arr.add(newBook);

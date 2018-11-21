@@ -3,20 +3,25 @@
 
 Array::Array()
 {
+    elements = new Book* [MAX_ARR_SIZE];
     size=0;
 }
-Array::~Array(){}
+Array::~Array(){
+    delete[] elements;
+}
 
-void Array::add(Book& newBook)
+void Array::add(Book* newBook)
 {
-    elements[size]=newBook;
-    size+=1;
-
+    
+size+=1;
 }
 
 void Array::print()
 {
     for(int i=0; i<size;i++){
-        elements[i].print();
-    }
+        std::cout<<"elements\t"<<elements<<'\n';
+        std::cout<<"*elements\t"<<*elements<<'\n';
+        
+        
+        }
 }

@@ -15,7 +15,7 @@ class Library
        
         Library();
         ~Library();
-        void addBook(Book&);
+        void addBook(Book*);
         void print();      
 
     private:
